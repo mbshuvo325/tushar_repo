@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tushar/setting_screen.dart';
 
 import 'dash_board.dart';
 
@@ -31,10 +32,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
   TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   static List<Widget> _widgetOptions = <Widget>[
     DashBoard(),
-    Text(
-      'Index 1: Business',
-      style: optionStyle,
-    ),
+    SettingScreen(),
     Text(
       'Index 2: School',
       style: optionStyle,

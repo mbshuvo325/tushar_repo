@@ -68,83 +68,96 @@ class DashBoard extends StatelessWidget {
    List<Widget> item = [
     FirstSliderPage(),
      SecondSliderPage(),
-     Container(
-       width: 400,
-       child: Padding(
-         padding: const EdgeInsets.symmetric(horizontal: 20.0),
-         child: Column(
-           crossAxisAlignment: CrossAxisAlignment.start,
-           children: [
-             Padding(
-               padding: const EdgeInsets.only(top:15.0),
-               child: Text("My Debit Card"),
-             ),
-             Padding(
-               padding: const EdgeInsets.only(top:25.0),
-               child: Row(
-                 children: [
-                   Text("DIGIBANC"),
-                   Icon(Icons.speaker)
-                 ],
-               ),
-             ),
-             Padding(
-               padding: const EdgeInsets.only(top:50.0),
-               child: Text("Omar mansur"),
-             ),
-             Padding(
-               padding: const EdgeInsets.only(top:5.0),
-               child: Text("****8812"),
-             ),
-             Padding(
-               padding: const EdgeInsets.only(top: 200),
-               child: Row(
-                 mainAxisAlignment: MainAxisAlignment.start,
-                 children: [
-                   Text("contactless pay"),
-                   Spacer(),
-                   FlutterSwitch(
-                     width: 60.0,
-                     height: 30.0,
-                     valueFontSize: 14.0,
-                     toggleSize: 25.0,
-                     value: true,
-                     borderRadius: 20.0,
-                     padding: 5.0,
-                     showOnOff: true,
-                     onToggle: (val) {
-
-                     },
-                   ),
-                 ],
-               ),
-             ),
-             Padding(
-               padding: const EdgeInsets.only(top: 20),
-               child: Row(
-                 mainAxisAlignment: MainAxisAlignment.start,
-                 children: [
-                   Container(
-                     height: 45,
-                     width: 105,
-                     decoration: BoxDecoration(
-                         color: Colors.red,
-                         borderRadius: BorderRadius.circular(50)),
-                     child: Center(child: Text("Add money"),),
-                   ),
-                   Spacer(),
-                   IconButton(onPressed: (){
-
-                   }, icon: Icon(Icons.settings)),
-                 ],
-               ),
-             ),
-
-           ],
-         ),
-       ),
-     )
+     ThirdSliderPage()
    ];
+}
+
+class ThirdSliderPage extends StatelessWidget {
+  const ThirdSliderPage({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: 400,
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 20.0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Padding(
+              padding: const EdgeInsets.only(top:15.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Text("My Debit Card"),
+                  Spacer(),
+                  Icon(Icons.wifi)
+                ],
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(top:25.0),
+              child: Text("DIGIBANC"),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(top:50.0),
+              child: Text("Omar mansur"),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(top:5.0),
+              child: Text("****8812"),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(top: 200),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Text("contactless pay"),
+                  Spacer(),
+                  FlutterSwitch(
+                    width: 60.0,
+                    height: 30.0,
+                    valueFontSize: 14.0,
+                    toggleSize: 25.0,
+                    value: true,
+                    borderRadius: 20.0,
+                    padding: 5.0,
+                    showOnOff: true,
+                    onToggle: (val) {
+
+                    },
+                  ),
+                ],
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(top: 20),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Container(
+                    height: 45,
+                    width: 105,
+                    decoration: BoxDecoration(
+                        color: Colors.red,
+                        borderRadius: BorderRadius.circular(50)),
+                    child: Center(child: Text("Add money"),),
+                  ),
+                  Spacer(),
+                  IconButton(onPressed: (){
+
+                  }, icon: Icon(Icons.settings)),
+                ],
+              ),
+            ),
+
+          ],
+        ),
+      ),
+    );
+  }
 }
 
 class SecondSliderPage extends StatelessWidget {
